@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+
+import AutoComplete from 'lib/AutoComplete';
+import AutoCompleteSearch from 'components/AutoCompleteSearch'
+import Database from 'components/Database'
+
+import BIRDS from 'data/commonbirds';
+
+import 'App.css'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const recommendationEngine = new AutoComplete(BIRDS);
+    return (
+        <div className="App">
+            <AutoCompleteSearch recommendationEngine={recommendationEngine} />
+            <Database title="Sample Database Values with Weights" data={BIRDS} />
+        </div>
+    )
 }
 
-export default App;
+export default App

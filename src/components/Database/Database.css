@@ -1,0 +1,19 @@
+.Database {
+    display: grid;
+    align-items: center;
+    background: #f6f9fc;
+    border-radius: 5%;
+    padding: 1rem;
+}
+
+.Database-table th {
+    padding: 1rem;
+}
+
+.Database-table td {
+    padding: 0.5rem;
+}
+
+.Database-table tr:nth-child(even) {
+    background: #ffffff;
+}

@@ -1,0 +1,18 @@
+.AutoCompleteSearch {
+    contain: content;
+    display: grid;
+    grid-auto-rows:auto;
+    grid-gap: 1rem;
+    background: #fcd669;
+    border-radius: 5%;
+    padding: 1rem;
+}
+
+.AutoCompleteSearch-label {
+    font-weight: bold;
+}
+
+.AutoCompleteSearch-input {
+    padding: 0.5rem;
+    margin: 1rem;
+}
